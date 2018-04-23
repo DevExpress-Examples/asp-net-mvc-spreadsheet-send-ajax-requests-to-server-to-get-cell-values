@@ -1,0 +1,48 @@
+<script type="text/javascript">
+function OnClick() {
+    var url = "Home/ValidateSpreadsheet/";
+    Spreadsheet.OnPost();
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: $('form').serialize(),
+        success: function (data) {
+            myLabel.SetText(data);
+        }
+    });
+}
+</script>
+
+
+@using(Ajax.BeginForm("ValidateSpreadsheet", "Home", new AjaxOptions() { UpdateTargetId = "myLabel", HttpMethod = "Post", InsertionMode = InsertionMode.Replace })) {
+
+    @Html.DevExpress().Button(settings => {
+    settings.Name = "Button";
+    settings.UseSubmitBehavior = false;
+    settings.Text = "Use OnPost";
+    settings.ClientSideEvents.Click = "OnClick";
+
+}).GetHtml()
+
+
+    @Html.DevExpress().Button(settings => {
+    settings.Name = "btnSubmit";
+    settings.Text = "Use Ajax.BeginForm";
+    settings.UseSubmitBehavior = true;
+}).GetHtml()
+
+    @Html.DevExpress().Label(settings => {
+    settings.Name = "myLabel";
+    settings.Text = "Text";
+    settings.ClientEnabled = true;
+    settings.Properties.EnableClientSideAPI = true;
+}).GetHtml()
+
+    <div id="containerSpreadsheet">
+        @Html.Action("SpreadsheetPartial")
+    </div>
+
+}
+
+
+

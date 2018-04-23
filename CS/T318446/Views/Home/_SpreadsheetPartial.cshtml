@@ -1,0 +1,8 @@
+@Html.DevExpress().Spreadsheet(settings => {
+    settings.Name = "Spreadsheet";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "SpreadsheetPartial" };
+    settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+	settings.Height = 500;
+	settings.ReadOnly = false;
+    	settings.RibbonMode = SpreadsheetRibbonMode.Ribbon;
+    }).Open(Server.MapPath("~/App_Data/MonthlyBudget.xlsx")).GetHtml()
