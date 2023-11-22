@@ -8,11 +8,11 @@ This example demonstrates how to use AJAX methods to send a request to the serve
 
 ![Send AJAX Requests](result.png)
 
-You should update the Spreadsheet state before you send a request to the server. To do this, use one of the following methods:
+You should update the Spreadsheet's state before you send a request to the server. To do this, use one of the following methods:
 
 * Call the [Ajax.BeginForm](https://learn.microsoft.com/en-us/dotnet/api/system.web.mvc.ajax.ajaxextensions.beginform?view=aspnet-mvc-5.2) method to add the `<form>` tag to the response. The Spreadsheet located in this tag automatically updates its state when a user submits the form.
 
-* Call an internal `OnPost` method to update the Spreadsheet state, then call the [Jquery.ajax](https://api.jquery.com/Jquery.ajax/) method to send a request. Note that we may change the name or implementation of the `OnPost` method in the future without any notification.
+* Call an internal `OnPost` method to update the Spreadsheet state, then call the [Jquery.ajax](https://api.jquery.com/Jquery.ajax/) method to send a request. Note that we may change the name or implementation of the `OnPost` method in the future without notice.
 
 ## Files to Review
 
