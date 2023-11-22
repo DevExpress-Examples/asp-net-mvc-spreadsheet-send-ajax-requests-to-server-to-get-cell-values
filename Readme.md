@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # Spreadsheet for ASP.NET MVC - How to send an AJAX request to the server to obtain cell values
 
-This example demonstrates how to use AJAX methods to send a request to the server and obtain cell values
+This example demonstrates how to use AJAX methods to send a request to the server and obtain cell values.
 
 ![Send AJAX Requests](result.png)
 
