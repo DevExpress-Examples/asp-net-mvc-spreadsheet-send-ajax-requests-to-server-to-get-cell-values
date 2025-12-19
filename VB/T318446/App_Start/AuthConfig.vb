@@ -1,6 +1,4 @@
-﻿Imports Microsoft.Web.WebPages.OAuth
-
-Namespace T318446
+﻿Namespace T318446
 	Public NotInheritable Class AuthConfig
 
 		Private Sub New()
